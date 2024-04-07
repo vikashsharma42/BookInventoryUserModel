@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link th:href="@{/CSS/style.css}" rel="stylesheet">
+</head>
+<body style='background-image:url("/images/lib7.jpg");'>
+	<div class="dvv">
+		<label class="lah">User Registration</label>
+	</div>
+	   <hr style="border:2px solid yellow">
+	<div align="center">
+   	<div class='dvreg'>
+		<label class="lah1" th:text="${'Congratulation!!! '+name}"></label>
+		<br><br>
+		<label class="la" style="color:magenta">You have been registered successfully</label>
+	<div class="dv">
+		<a href="login">click to login</a>
+	</div>
+	</div>
+
+</body>
+
+</html>

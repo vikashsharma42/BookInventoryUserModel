@@ -1,0 +1,282 @@
+/*---------registration---------*/
+.dvv{
+	text-align: center;
+	margin-top:2vw;
+}
+.lah{
+	font-size:2vw;
+	font-family:fantasy;
+	color:red;
+	background-color: greenyellow;
+	border-radius:.5vw;
+	text-decoration:underline;
+	font-size: 2.5vw
+}
+.la{
+	font-size:1.5vw;
+}
+.laa{
+	font-size: 2vw;
+	font-family:lucida calligraphy;
+	color:#0c17a5;
+}
+span{
+	color: red;
+	font-size:2vw;
+}
+.btr{
+	background-color: #008CBA;
+  	border: none;
+  	color: white;
+  	padding: .2vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	border-radius:.4vw;
+  	height:3vw;
+  	cursor:pointer;
+}
+/*----------register-------------*/
+.dvreg{
+	padding:10px 10px 30px 10px;
+	width:40%;
+	background-color: #5f7a9b;
+	border-radius:.4vw;
+	margin-top:4vw;
+	border: 1vw solid #2df6a0;
+	
+}
+.lah1{
+	font-size:2vw;
+	font-family:lucida calligraphy;
+	color:red;
+	border-radius:.5vw;
+	font-size: 2vw
+}
+
+a{
+	font-size:2.5vw;
+}
+
+/*------TOP---------*/
+.tpla{
+      color:orange;
+      font-size: 3vw;
+      font-family: lucida calligraphy;
+      text-transform: capitalize;
+      text-decoration: red underline;
+}
+.tplaa{
+	margin-left: 3vw;
+	color: aliceblue;
+	font-size: 2.5vw;
+	font-weight: bold;
+}
+.tpbt{
+	background-color: white;
+  	border: none;
+  	color: blue;
+  	padding: .4vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	margin-left: 1vw;
+  	border-radius:.4vw;
+}
+.tph{
+	border:.6vw solid yellow;
+	margin-left:.5vw;
+	margin-right:.5vw;
+}
+/*----SEARCH-------*/
+.searchta{
+	margin-top:2vw;
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	border:.3vw solid #88cc33;
+	border-radius:.5vw;
+	background-color:silver;
+}
+.tatd{
+	padding:.7vw;
+	font-size: 1.5vw;
+	font-family:fantasy;
+	color:cyan;
+}
+.tbb{
+	height:3vw;
+	width:100%;
+	color:magenta;
+	background-color: #AACCBB;
+}
+.sbtr{
+	background-color:orange;
+  	border: none;
+  	color: blue;
+  	padding: .4vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	margin-left: 1vw;
+  	border-radius:.4vw;
+}
+.listla{
+	background-color:springgreen;
+	color:red;
+	font-size: 3vw;
+	font-family: elephant;
+	font-weight:bold;
+}
+/*-------SearchList--------*/
+.tdse{
+	font-size:1.8vw;
+	font-family:elephant;
+	color:blue;
+	text-decoration:#ff7711 underline;	
+}
+.tdsa{
+	font-size:1.5vw;
+	font-family:lucida calligraphy;	
+	color:darkviolet;
+}
+.scrollit {
+    overflow:scroll;
+    height:53vh;
+}
+.scrollit thead th {
+      position: sticky;
+      background:teal;
+}
+/*-----purchase--------*/
+.tdlist{
+	font-size:1.7vw;
+	font-family: cursive;
+}
+.tdr{
+	font-size:1.7vw;
+	font-family: fantasy;	
+	text-decoration: red underline;
+}
+.pta{
+	width:40%;
+	font-size:1.8vw;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#4d9b1a;
+	border:.8vw solid red;
+}
+.ph{
+	font-size:2vw;
+	color:darkmagenta
+}
+.pi{
+	width: 100%;
+	background-color: #AACCBB;
+	color: #0c17a5;
+}
+.bdv{
+	  font-size: 2vw;
+	  font-weight: bold;
+	  font-family: lucida calligraphy;
+	  font-style: italic;
+	  margin-top:2vw;
+	  margin-left:auto;
+	  margin-right:auto;
+	  color: violet;
+}
+/*------Transaction-List----------*/
+
+.empty{
+	color: red;
+	font-weight: 700;
+	font-size: 3rem;
+	font-family: lucida calligraphy;
+}
+.transaction{
+	color:#aa00ff;
+	font-weight: 700;
+	font-size: 2rem;
+	font-family: lucida calligraphy;
+	background-color: #2df6a0;
+}
+.tlist{
+	color:#dd3300;
+	font-weight: 700;
+	font-size: 2.1rem;
+	font-family: fantasy;
+	background-color: #aa00ff;
+}
+
+/*------Pagination---------*/
+.btl{
+	background-color: white;
+  	border: none;
+  	color: blue;
+  	padding: .4vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	margin-left: 1vw;
+  	border-radius:.4vw;
+}
+/*------catList-------*/
+
+.hp{
+	font-family: canva;
+	color:magenta;
+	font-weight:bold;
+	background-color:green;
+}
+.dp{
+	color:#ff7711;
+	background-color:yellow;
+}
+.tad{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:2vw;
+	border:1vw solid #ff7711;
+}
+/*------Profile----------*/
+.ud{
+	background-color: #88cc33;
+	color: royalblue;
+	font-size: 2vw;
+	font-weight:bold;
+	font-style: italic;
+}
+.dt{
+	margin-top: 8vw;
+	background-color:cornflowerblue;
+	font-size: 1.9vw;
+	border:.2vw solid red;
+	border-radius:1vw;
+}
+.pt{
+	margin-top:15vw;
+	color: #0c17a5;
+	font-size: 2vw;
+	font-family:fantasy;
+	margin-left:29%;
+	margin-right: 31%;
+}
+
+.ptb{
+	
+	color:red;
+	font-size: 2vw;
+	font-family:lucida Calligraphy;
+	border: .2vw solid yellow;
+	border-radius: 1vw;
+}
+.ein{
+	width:100%;
+	height:300%;
+	font-family: cursive;
+	font-size:1.5vw;
+	font-weight: bold;
+	border-color:greenyellow;
+	color:blue;
+	background-color:teal;
+}

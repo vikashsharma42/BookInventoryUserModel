@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<script src="@{/JS/script.js}"></script>
+	<link th:href='@{/CSS/login.css}' rel='stylesheet'>
+</head>
+<body class='bgi'>
+	<form action='authentication' method='post'>
+	<div class='dvv'>
+		<label class="la">ONLINE BOOK STORE</label>
+	</div>
+	<form action='authentication' method='post'>
+		<div align='center'>
+			<div class='dvuser'>
+				<h2 >User account sign in</h2>
+				<div class='dvlog'>
+					<label class='laa'>Enter user id</label><br>
+					<input type='text' name='uid' th:value="${userid}" class='tblog' placeholder="Enter User id" required>
+				</div>
+				<div class='dvlog'>
+					<label class='laa'>Enter password</label><br>
+					<input type='password' name='pass' class='tblog' placeholder="Enter password" required>
+				</div>
+				<div class='dvlog' style="margin-top:1vw;">
+					<button class='btlog'>Sign In</button>
+					<div style="text-align:center;margin-top:1vw">
+						<label th:text="${msg}" style='color:red;font-size:2vw;'></label>
+					</div>
+				</div>
+			</div>
+	</form>
+	<div class="dvuser">
+		<h2>Don't have an account?</h2>
+		<div class="dvlog" style="margin-top:1vw;">
+			<form action="registration">
+				<button class="btlog" style="background-color: #008CBA;">Create Account</button>
+			</form>
+		</div>
+	</div>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style='background-image:url("/images/lib9.jpg");'>
+	<form>
+		<div th:insert="top"></div>
+		<div class='container'>
+			<div class='card' style="width:120%; margin-left:-7vw;">
+				<div class='card-header'>
+
+				</div>
+				<div class='card-body'>
+					<div class='dvv' th:if="${blist.empty}">
+						<label class='lah' style='color:green'>Sorry no book</label>
+					</div>
+					<div th:if="${!blist.empty}">
+						<table class='table' style="background-color:#77ccaa">
+							<thead>
+								<tr>
+									<th class='tdr' style="color:#cc88aa">BId</th>
+									<th class='tdr' style="color:#cc88aa">Title</th>
+									<th class='tdr' style="color:#cc88aa">Author</th>
+									<th class='tdr' style="color:#cc88aa">CId</th>
+									<th class='tdr' style="color:#cc88aa">PId</th>
+									<th class='tdr' style="color:#cc88aa">Copies</th>
+									<th class='tdr' style="color:#cc88aa">Price</th>
+									<th class='tdr' style="color:#cc88aa">Stock</th>
+									<th class='tdr' style='color:magenta'>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="book:${blist}">
+									<td class='tdlist' style='color: #aaee11;' th:text="${book.bid}"></td>
+									<td class='tdlist' style='color: #cc3300;' th:text="${book.title}"></td>
+									<td class='tdlist' style='color:  #ffee55;' th:text="${book.author}"></td>
+									<td class='tdlist'><a th:href='@{/bookstore/user/category/details(cid=${book.catid})}' th:text="${book.catid}" style='text-decoration:underline'></a></td>
+									<td class='tdlist'><a th:href="@{/bookstore/user/publisher/details(pid=${book.pubid})}" th:text="${book.pubid}" style='text-decoration:underline'></a></td>
+									<td class='tdlist' style='color: darkgoldenrod;' th:text="${book.copies}"></td>
+									<td class='tdlist' style='color: goldenrod;' th:text="${'&#8377'+book.price}"></td>
+									<td class='tdlist' th:if="${book.copies>0}" style='color:green'>In Stock</td>
+									<td class='tdlist' th:if="${book.copies==0}" style='color:red'>Out of Stock</td>
+									<td class='tdr'>
+										 <label th:if="${book.copies==0}" style="color:deeppink;font-family: fantasy;">Comming soon</label>
+				                          <a th:if="${book.copies>0}" th:href="@{/bookstore/user/purchase(bid=${book.bid})}"><i class="fa fa-shopping-cart"></i></a>
+                                   </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div style="background-color: antiquewhite;width: 100%;" th:insert="purchase/pagination"></div>
+				</div>
+			</div>
+			<div class='dvv'>
+				<a class='btl' href='home' style='background-color:orange'>Back</a>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

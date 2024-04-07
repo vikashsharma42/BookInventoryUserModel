@@ -1,0 +1,41 @@
+<html   xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+	</head>
+ <body style='background-image:url("/images/Lib6.jpg");'>
+  <div th:insert="top"></div>
+  <div class='container'>
+  <div class='card'>
+  <div class='card-body'>
+    <div class='dvv' th:if="${plist.empty}">
+      <label class='lah' style='color:green'>Sorry publisher list is empty</label>
+    </div>
+    <div th:if="${!plist.empty}" class='scrollit'>
+    <table class='table' style="background-color:#77ccbb;">
+     <thead>
+      <tr>
+     	<th class='tdr' style='color:greenyellow;'>Pub Id</th>
+     	<th class='tdr' style='color:greenyellow;'>Publisher</th>
+     	<th class='tdr' style='color:greenyellow;'>Address</th>
+     	<th class='tdr' style='color:greenyellow;'>Email</th>
+     	<th class='tdr' style='color:magenta'>Action</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr th:each="pub:${plist}">
+     	<td class='tds' th:text="${pub.pubid}"></td>
+     	<td class='tds1' th:text="${pub.publisher}"></td>
+     	<td class='tds2' th:text="${pub.address}"></td>
+     	<td class='tds3' th:text="${pub.email}"></td>
+       </tr>
+       </tbody>
+      </table>
+    </div>
+    </div>
+   </div>
+    <div class='dvv'>
+     <a class='btl' href='../home' style='background-color:orange'>Back</a>
+  </div>
+   </div>
+ </body>
+ </html>

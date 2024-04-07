@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body style='background-image:url("/images/lib9.jpg");'>
+	<div th:insert="top"></div>
+	<div style="text-align:center;">
+		<label class="la" style="color:magenta; font-size: 2vw;" th:text="${msg}"></label>
+	</div>
+	<table border='2' class='tad' style="width: 50%;">
+		<tr>
+			<td colspan="2" align="center" class="ud">User Details</td>
+		</tr>
+		<tr>
+			<td class='tatd hp' align="left">User Id</td>
+			<td class='tatd dp' th:text="${user.userid}"></td>
+		</tr>
+		<tr>
+			<td class='tatd hp' align="left">User Name</td>
+			<td class='tatd dp' th:text="${user.name}"></td>
+		</tr>
+		<tr>
+			<td class='tatd hp' align="left">User Address</td>
+			<td class='tatd dp' th:text="${user.address}"></td>
+		</tr>
+		<tr>
+			<td class='tatd hp' align="left">User Phone</td>
+			<td class='tatd dp' th:text="${user.phone}"></td>
+		</tr>
+	</table>
+	<div style="margin-left:30vw;margin-top:2vw;">
+		<a href="editprofile" class="btr" style="margin-left:3vw;">Edit profile</a>
+		<button class='btr' style='background-color:orange' onclick='history.back()'>Back</button>
+		<a href="changepass" class="btr" style="margin-right:3vw;">change Password</a>
+	</div>
+</body>
+
+</html>

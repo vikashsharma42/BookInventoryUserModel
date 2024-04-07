@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<div th:insert="top"></div>
+		<div class="conatiner">
+			<div>
+				<div class="card-body">
+				<div align="center" th:if="${list.empty}">
+					<label class="empty">Not purched any book yet</label>
+				</div>
+				<div th:if="${!list.empty}" class="scrolit">
+					<table class="table table-hover table-bordered ">
+						<thead>
+							<tr>
+								<th class="transaction">Book Id</th>
+								<th class="transaction">No of copies</th>
+								<th class="transaction">Price</th>
+								<th class="transaction">Total Cost</th>
+								<th class="transaction">Transaction Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="t:${list}">
+								<td class="tlist" th:text="${t.bid}"></td>
+								<td class="tlist" th:text="${t.quantity}"></td>
+								<td class="tlist" th:text="${'&#8377;'+t.price}"></td>
+								<td class="tlist" th:text="${'&#8377;'+t.price*t.quantity}"></td>
+								<td class="tlist" th:text="${t.date}"></td>
+							</tr>
+						</tbody>
+					</table>
+			    </div>
+			</div>
+		</div>
+		<div style="text-align: center;">
+			<a href="home" class="btl">Home</a>
+		</div>
+	</body>

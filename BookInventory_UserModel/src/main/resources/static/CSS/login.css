@@ -1,0 +1,60 @@
+.bgi{
+	 background-image:url("../images/user.jpg");
+}
+.dvv{
+	text-align: center;
+	margin-top:2vw;
+}
+.la{
+	color:#f7a2ca;
+	font-size:3vw;
+	font-family:elephant;
+	text-decoration:underline tomato;
+}
+.hh{
+	font-size:2.1vw;
+	color:orange;
+	text-decoration:underline dashed darkblue;
+
+}
+.dvuser{
+	padding:10px 10px 30px 10px;
+	width:40%;
+	background-color:white;
+	border-radius:.4vw;
+	margin-top:2vw;
+}
+.dvlog{
+	text-align: left;
+	width:70%;
+	margin-top:1vw;
+}
+.laa{
+	font-size:2vw;
+	color:#44ccbb;
+	font-family:fantasy;
+}
+.btlog{
+	background-color:#00BA8C;
+	color:white;
+	font-size:1.8vw;
+	width:100%;
+	border:none;
+	padding:.4vw;
+	font-weight:bold;
+	border-radius:5px;
+	cursor: pointer;
+}
+.tblog{
+	font-size:1.5vw;
+	width:100%;
+	border-radius:.4vw;
+	border-color:red;
+	height:3vw;
+	color: blue;
+	background-color:transparent;
+}
+h2{
+	font-size:2vw;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

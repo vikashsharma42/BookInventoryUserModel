@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<title>www.bookstore.in</title>
+
+<head>
+	<script th:src="@{/JS/script.js}"></script>
+	<link th:href="@{/CSS/style.css}" rel="stylesheet">
+	<link th:href="@{/CSS/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body style='background-image:url("/images/lib.png");'>
+	<div class='dv'>
+		<table style="width: 90%;">
+			<tr>
+				<td>
+					<label class="tplaa" th:text="${'Hii, '+session.name}" ></label>
+				</td>
+				<td align="center">
+					<label class="tpla">ONLINE BOOK STORE</label>
+				</td>
+				<td align="right">
+					<a href="logout" class="tpbt">Logout</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<hr class="tph">
+</body>
+</head>
+
+</html>

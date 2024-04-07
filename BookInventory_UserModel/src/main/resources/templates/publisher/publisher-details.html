@@ -1,0 +1,29 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<body style='background-image:url("/images/lib.png");'>
+  <div th:insert="top"></div>
+  <div class='dvv'>
+   <label class='lah'>Publisher Details</label>
+  </div>
+  <table border='1' class='tad' style='width:50%;border-color: red;'>
+   <tr>
+    <td class='tatd hp'>Publisher Id</td>
+    <td class='tatd dp' th:text="${pub.pubid}"></td>
+   </tr>
+   <tr>
+    <td class='tatd hp'>Publisher</td>
+    <td class='tatd dp' th:text="${pub.publisher}"></td>
+   </tr>
+   <tr>
+    <td class='tatd hp'>Address</td>
+    <td class='tatd dp' th:text="${pub.address}"></td>
+   </tr>
+   <tr>
+    <td class='tatd hp'>Email Id</td>
+    <td class='tatd dp' th:text="${pub.email}"></td>
+   </tr>
+  </table>
+  <div class='dvv'>
+   <button class='btr' onclick='history.back()'>Back</button>
+  </div>
+</body>
+</html>

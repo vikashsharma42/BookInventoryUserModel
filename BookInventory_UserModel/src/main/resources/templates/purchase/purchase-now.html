@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:insert="top"></div>
+	<form action="purchasenow">
+		<div align="center">
+				<table border='2' class="pta">
+					<tr>
+						<th class="ph">Book Title</th>
+						<td class="tatd" th:text="${book.title}"></td>
+					</tr>
+					<tr>
+						<th class="ph">Author Name</th>
+						<td class="tatd" th:text="${book.author}"></td>
+					</tr>
+                    <tr>
+						<th class="ph">Book Price</th>
+						<td class="tatd">&#8377;<label id='price' th:text="${book.price}"></label></td>
+					</tr>
+					<tr>
+						<th class="ph">Book Quantity</th>
+						<td class="tatd" id='aq' th:text="${book.copies}"></td>
+					</tr>
+					<tr>
+						<th class="ph">Ente Quantity</th>
+						<td><input class="pi" onkeyup="return checkQuantity()" onchange="findCost()" type="number" id="quantity" name="quantity" value="1" min="1" th:max="${book.copies}"></td>
+					</tr>
+					<tr>
+						<th class="ph">Total Cost</th>
+						<td class="tatd">&#8377;<label id="cost" th:text="${book.price}"></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<button class="btr" id="bt">Purchase Now</button>
+							<input type="button" class="btr" value="cancle" style="background-color: orange;" onclick="history.back()"
+						</td>
+					</tr>
+				</table>
+		</div>
+	</form>
+</body>
+</html>

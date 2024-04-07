@@ -1,0 +1,66 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<script th:src="@{/JS/script.js}"></script>
+	<link th:href="@{/CSS/style.css}" rel="stylesheet">
+	<link th:href="@{/CSS/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body style='background-image:url("/images/lib7.jpg");'>
+	<div class="dvv">
+		<label class="lah">User Registration</label>
+	</div>
+	<hr>
+	<div class='container'>
+		<div class='card mx-auto col-md-10' style="background-color:#ffaa00;">
+			<div class='card-body'>
+				<div style="text-align:center;">
+					<label class="la" style="color:magenta; font-size: 2vw;" th:text="${msg}"></label>
+				</div>
+				<form action="registered" method="post" th:object="${user}">
+					<div class='row form-group'>
+						<div class='col-md-12'>
+							<label for="userid" class="laa">Enter user id</label><span>*</span>
+							<input type="text" th:field="*{userid}" id="userid" class="form-control" style="font-family:plain;color:blue; font-size: 1.4vw;" required />
+						</div>
+					</div>
+					<div class="row-form-group">
+							<div class="row form-group">
+							<div class="col-md-6">
+								<label for="password" class="laa">Enter password</label><span>*</span>
+								<input type='password' name="password" id="password" class="form-control" style="font-family:plain;color:blue; font-size: 1.4vw;" required />
+							</div>
+							<div class="col-md-6">
+								<label for="cpassword" class="laa">Enter confirm password</label><span>*</span>
+								<input type="password" class="form-control" id="cpassword" style="font-family:plain;color:blue; font-size: 1.4vw;" required/>
+							</div>
+						</div>
+					</div>
+						<div class="row form-group">
+							<div class="col-md-6">
+								<label for="name" class="laa">Enter name</label><span>*</span>
+								<input type='text' th:field="*{name}" id='name' class="form-control" style="font-family:plain;color:blue; font-size: 1.4vw;" required />
+							</div>
+							<div class="col-md-6">
+								<label for="phone" class="laa">Enter phone number</label><span>*</span>
+								<input type="text" th:field="*{phone}" id="phone" class="form-control" style="font-family:plain;color:blue; font-size: 1.4vw;" required/>
+							</div>
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="address" class="laa">Enter address</label><span>*</span>
+								<input type="text" th:field="*{address}" id="address" class="form-control" style="font-family:plain;color:blue; font-size: 1.4vw;" required/>
+							</div>
+						</div>
+						<div class="row-form-group">
+							<div class="col-md-10">
+								<button class="btr" onclick="return matchPassword()">Register</button>
+								<input type='button' value='cancel' class='btr' style='background-color:red;' onclick='history.back()'>
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</!DOCTYPE html>

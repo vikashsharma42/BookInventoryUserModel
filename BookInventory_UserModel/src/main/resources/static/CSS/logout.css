@@ -1,0 +1,38 @@
+.bgi{
+	 background-image:url("../images/libb2.jpg");
+}
+
+.dv{
+	text-align: center;
+	margin-top:2vw;
+}
+.la{
+	color:#99aaee;
+	font-size:3vw;
+	font-family:fantasy;
+	text-decoration:underline tomato;
+}
+.dvlog{
+	padding:10px 10px 30px 10px;
+	width:40%;
+	background-color:#22aa77;
+	border-radius:.4vw;
+	margin-top:2vw;
+}
+.la1{
+	font-size:3vw;
+	color:orange;
+	text-decoration:underline dashed darkblue;
+	font-family:lucida calligraphy;
+}
+.laa{
+	color:red;
+	font-size: 3vw;
+	font-family:elephant;
+}
+a:hover{
+	background-color: #33aaff;
+}
+a{
+	font-size:2.5vw;
+}

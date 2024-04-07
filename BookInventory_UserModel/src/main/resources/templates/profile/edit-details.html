@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<formbody style='background-image:url("/images/lib9.jpg");'>
+	<div th:insert="top"></div>
+	<form action="updateprofile" method="post">
+		<table border='2' class='tad' style="width: 50%;">
+			<tr>
+				<td class='tatd hp' align="left">User Id</td>
+				<td class='tatd dp'>
+					<input type="text" class="ein" name="userid" th:value="${user.userid}" style='color:red' readonly="readonly">
+                    <input type="hidden" name="password" th:value="${user.password}">
+				</td>
+			</tr>
+			<tr>
+				<td class='tatd hp' align="left">User Name</td>
+				<td class='tatd dp'>
+					<input type="text" name="name" class="ein" th:value="${user.name}">
+				</td>
+			</tr>
+			<tr>
+				<td class='tatd hp' align="left">User Address</td>
+				<td class='tatd dp'>
+					<input type="text" name="address" class="ein" th:value="${user.address}">
+				</td>
+			</tr>
+			<tr>
+				<td class='tatd hp' align="left">User Phone</td>
+				<td class='tatd dp'>
+					<input type="text" name="phone" class="ein" th:value="${user.phone}">
+				</td>
+			</tr>
+			<tr>
+				<td class='tatd hp' align="center" colspan="2"><button class='btr'>Update</button>
+					<input type='button' value='back' class='btr' style='background-color:orange;'onclick='history.back()'>
+				</td>
+			</tr>
+		</table>
+	</form>
+	</body>
+
+</html>

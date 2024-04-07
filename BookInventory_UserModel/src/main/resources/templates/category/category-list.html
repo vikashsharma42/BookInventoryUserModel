@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+	</head>
+	<style>
+         .bg{
+			 background-image:url("/images/lib1.png"); border-image-width: 50%;
+		 }
+	</style>
+</head>
+<body class='bg'>
+	<div th:insert="top"></div>
+	<div class='container'>
+		<div class='card'>
+			<div class='card-body'>
+				<div class='dvv' th:if="${clist.empty}">
+					<label class='text-danger lah'>Category list is empty</label>
+				</div>
+				<div th:if="${!clist.empty}" class='scrollit'>
+					<table class='table' style="background-color:#77ccbb;">
+						<thead>
+							<tr>
+								<th class='tdr' style='color:greenyellow;'>Cat Id</th>
+								<th class='tdr' style='color:greenyellow;'>Category</th>
+								<th class='tdr' style='color:greenyellow;'>Description</th>
+								<th class='tdr' style="color:magenta;">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="cat:${clist}">
+								<td class='tdd' th:text="${cat.catid}"></td>
+								<td class='tdd1' th:text="${cat.category}"></td>
+								<td class='tdd2' th:text="${cat.description}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class='dvv'>
+			<a class='btl' href='../home' style='background-color:orange'>Back</a>
+		</div>
+	</div>
+</body>
+
+</html>

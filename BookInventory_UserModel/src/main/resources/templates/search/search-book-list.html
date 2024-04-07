@@ -1,0 +1,59 @@
+<html   xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <div th:insert="top"></div>
+ <body style='background-image: url("/images/libb4.jpg");'>
+  <form>
+  <div style='text-align:center'>
+   <label class='listla' th:text="${'Book list by '+by}"></label>
+  </div> 
+  <div class='container'>
+    <div class='card'>
+      <div class='card-body'>
+      <div class='dvv' th:if="${blist.empty}">
+   		<label class='lah' style='color:red'>There is no book in store</label>
+      </div>
+      <div th:if="${!blist.empty}" class='scrollit'>
+        <table class='table laa'  style="background-color: yellow;">
+   		 <thead style="background:teal;">
+    		<tr>
+				<th class="tdse">Book</th>
+				<th class="tdse">Title</th>
+				<th class="tdse">Author</th>
+				<th class="tdse">CId</th>
+				<th class="tdse">PId</th>
+    		    <th class="tdse">Copies</th>
+    		    <th class="tdse">Price</th>
+    		    <th class="tdse">Stock</th>
+    		     <th class="tdse" style="color:greenyellow;">Purchase</th>
+    		    </tr>
+         </thead>
+         <tbody>
+    		<tr th:each="book:${blist}">
+     			<td class='tdsa' th:text="${book.bid}"></td>
+     			<td class='tdsa' th:text="${book.title}"></td>
+     			<td class='tdsa' th:text="${book.author}"></td>
+     			<td class='tdsa' th:text="${book.catid}"></td>
+     			<td class='tdsa' th:text="${book.pubid}"></td>
+     			<td class='tdsa' th:text="${book.copies}"></td>
+     			<td class='tdsa' th:text="${'&#8377'+book.price}"></td>
+     			<td class='tdsa' th:if="${book.copies>0}" style='color:green'>In Stock</td>
+     		   <td class='tdsa' th:if="${book.copies==0}" style='color:red'>Out of Stock</td>
+    		   <td class="tdsa">
+				   <label th:if="${book.copies==0}" style="color:deeppink;font-family: fantasy;">Comming soon</label>
+				  <a th:if="${book.copies>0}" th:href="@{/bookstore/user/purchase(bid=${book.bid})}"><i class="fa fa-shopping-cart"></i></a>
+				  </td>
+    		</tr>
+   		 </tbody>
+  	   </table>
+     </div>
+     <div class='dvv'>
+     	<a class='btr' href='/bookstore/user/searchbook' style='background-color:orange'>Back</a>
+  	 </div>
+    </div>
+   </div>
+  </div>
+  </form>
+ </body>
+ </html>
